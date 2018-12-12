@@ -11,6 +11,7 @@ RUN VERSION=2.1.0 && \
     cd /opt/ANTs/$VERSION && \
     cmake /tmp/ANTs && \
     make -j 2 && \
+    cp /tmp/ANTs/Scripts/* bin/ && \
     cd /tmp && \
     rm -rf v${VERSION}* ANTs*
 
